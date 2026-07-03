@@ -336,16 +336,31 @@ function generateBios() {
             const finalBio = bio.replace(/\{keyword\}/g, keywords);
             const card = document.createElement("div");
             card.className = "result-card";
-            card.innerHTML = `
-                <div class="label">
-                    <span>Bio ${i + 1}</span>
-                    <div>
-                        <button class="copy-btn" onclick="copyBio(this, \`${finalBio.replace(/`/g, '\\`')}\`)">📋 Copy</button>
-                        <button class="regenerate-btn" onclick="regenerateSingle(this, ${i})">🔄</button>
-                    </div>
-                </div>
-                <div class="bio-text">${finalBio}</div>
-            `;
+
+            const label = document.createElement("div");
+            label.className = "label";
+            const span = document.createElement("span");
+            span.textContent = "Bio " + (i + 1);
+            const btnWrap = document.createElement("div");
+            const copyBtn = document.createElement("button");
+            copyBtn.className = "copy-btn";
+            copyBtn.textContent = "📋 Copy";
+            copyBtn.addEventListener("click", () => copyBio(copyBtn, finalBio));
+            const regenBtn = document.createElement("button");
+            regenBtn.className = "regenerate-btn";
+            regenBtn.textContent = "🔄";
+            regenBtn.addEventListener("click", () => regenerateSingle(regenBtn, i));
+            btnWrap.appendChild(copyBtn);
+            btnWrap.appendChild(regenBtn);
+            label.appendChild(span);
+            label.appendChild(btnWrap);
+
+            const bioText = document.createElement("div");
+            bioText.className = "bio-text";
+            bioText.textContent = finalBio;
+
+            card.appendChild(label);
+            card.appendChild(bioText);
             biosList.appendChild(card);
         });
 
