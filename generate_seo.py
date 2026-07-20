@@ -152,6 +152,9 @@ for art in ARTICLES:
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7217603696203672" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MY95FHB8JG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-MY95FHB8JG');</script>
 <title>{art['title']}</title>
 <meta name="description" content="{desc}">
 <meta name="robots" content="index, follow">
@@ -182,6 +185,8 @@ footer{{text-align:center;color:#475569;padding:30px 0;font-size:.85rem}}
 <div class="date">{today}</div>
 <div>{tags}</div>
 {body_html}
+<ins class="adsbygoogle" style="display:block;margin:24px 0" data-ad-client="ca-pub-7217603696203672" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({{}})</script>
 <div class="cta">
 <strong>✨ Generate your perfect bio now</strong><br>
 <a href="../index.html">Try the Free Bio Generator →</a>
