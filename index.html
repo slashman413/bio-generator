@@ -81,7 +81,19 @@ footer a{color:#3b82f6;text-decoration:none}
 /* Loading spinner */
 .spinner{display:inline-block;width:20px;height:20px;border:3px solid #1e293b;border-top-color:#3b82f6;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:8px}
 @keyframes spin{to{transform:rotate(360deg)}}
+
+.share-bar{display:flex;align-items:center;gap:6px;margin:20px 0 16px;flex-wrap:wrap;justify-content:center}
+.share-bar .lbl{font-size:11px;color:#475569;font-weight:600;margin-right:4px;letter-spacing:.5px}
+.share-btn{display:inline-flex;align-items:center;gap:4px;padding:6px 11px;border-radius:8px;border:1px solid #334155;background:#1e293b;color:#94a3b8;text-decoration:none;font-size:12px;font-weight:600;cursor:pointer;transition:.15s}
+.share-btn:hover{background:#0f172a;border-color:#475569;color:#e2e8f0}
+.share-btn.copied{background:#22c55e;border-color:#22c55e;color:#0a0a1a}
 </style>
+<meta property="og:title" content="AI Bio Generator — Free Instagram, LinkedIn & Twitter Bios">
+<meta property="og:description" content="Generate professional, creative, and catchy bios for Instagram, LinkedIn, Twitter/X, and TikTok. Free AI-powered bio generator with hundreds of templates.">
+<meta property="og:image" content="https://slashmantools.us/bio-generator/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="SlashMan Tools">
 </head>
 <body>
 <div class="container">
@@ -89,6 +101,16 @@ footer a{color:#3b82f6;text-decoration:none}
         <h1>✨ Bio Generator</h1>
         <p>Generate perfect bios for Instagram, LinkedIn, Twitter & TikTok — free</p>
     </header>
+    <div class="share-bar">
+        <span class="lbl">📤 Share</span>
+        <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fslashmantools.us%2Fbio-generator%2F" target="_blank" rel="noopener">📘 Facebook</a>
+        <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fslashmantools.us%2Fbio-generator%2F" target="_blank" rel="noopener">🐦 X</a>
+        <a class="share-btn" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fslashmantools.us%2Fbio-generator%2F" target="_blank" rel="noopener">💬 Line</a>
+        <button class="share-btn" onclick="shareLink(this,'https://slashmantools.us/bio-generator/')">🔗 Copy Link</button>
+    </div>
+    <script>
+        function shareLink(el,url){navigator.clipboard.writeText(url).then(function(){el.textContent='✓ Copied!';el.classList.add('copied');setTimeout(function(){el.textContent='🔗 Copy Link';el.classList.remove('copied');},2000);}).catch(function(){})}
+    </script>
 
     <ins class="adsbygoogle" style="display:block;margin:16px 0" data-ad-client="ca-pub-7217603696203672" data-ad-format="auto" data-full-width-responsive="true"></ins>
     <script>(adsbygoogle=window.adsbygoogle||[]).push({})</script>
@@ -155,6 +177,27 @@ footer a{color:#3b82f6;text-decoration:none}
             <p>Absolutely. All generated bios are free to use for personal or commercial purposes.</p>
         </div>
     </div>
+
+  <!-- CROSS-LINK START -->
+  <div class="cross-links" style="max-width:800px;margin:40px auto 0;text-align:center">
+    <div style="font-size:14px;font-weight:700;color:#c7c7f0;margin-bottom:4px">🔗 你可能也會喜歡</div>
+    <div style="font-size:11px;color:#7878a0;margin-bottom:14px">More Tools</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;text-align:left">
+      <a href="https://slashmantools.us/color-tools/" style="display:block;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(99,102,241,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+        <div style="font-size:13px;font-weight:700;color:#e2e8f0">顏色工具 | Color Tools</div>
+        <div style="font-size:11px;color:#7878a0;margin-top:3px">選色/HEX↔RGB/CSS 漸層產生</div>
+      </a>
+      <a href="https://slashmantools.us/qr-code-generator/" style="display:block;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(99,102,241,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+        <div style="font-size:13px;font-weight:700;color:#e2e8f0">QR Code 產生器 | QR Generator</div>
+        <div style="font-size:11px;color:#7878a0;margin-top:3px">網址/文字即時生成 QR Code</div>
+      </a>
+      <a href="https://slashmantools.us/word-counter/" style="display:block;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);text-decoration:none;color:inherit;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(99,102,241,.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'">
+        <div style="font-size:13px;font-weight:700;color:#e2e8f0">字數統計 | Word Counter</div>
+        <div style="font-size:11px;color:#7878a0;margin-top:3px">即時統計字數/字元/閱讀時間</div>
+      </a>
+    </div>
+  </div>
+  <!-- CROSS-LINK END -->
 
     <footer>
         <p><a href="https://github.com/slashman413/bio-generator">GitHub</a> · <a href="https://slashmantools.us/tools/">More Free Tools</a></p>
